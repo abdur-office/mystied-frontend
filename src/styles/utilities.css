@@ -1,0 +1,131 @@
+@layer utilities {
+  /*
+  ----------------------
+  🟩 SCROLLBAR START
+  ---------------------- 
+  */
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  /* Hide only vertical scrollbar (y-axis) */
+  .no-y-scrollbar {
+    overflow-y: scroll; /* or auto, depending on your layout */
+  }
+
+  /* Chrome, Safari, and Opera */
+  .no-y-scrollbar::-webkit-scrollbar {
+    width: 0px; /* Hide vertical scrollbar */
+    background: transparent; /* Optional: make it transparent */
+  }
+
+  /* Firefox */
+  .no-y-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  /* Optional: show horizontal scrollbar */
+  .no-y-scrollbar::-webkit-scrollbar:horizontal {
+    height: 8px; /* adjust thickness */
+  }
+
+  /* scrollbar style 1 */
+
+  .cst-scrollbar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  .cst-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+  }
+
+  .cst-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  /* scrollbar style 1 end */
+
+  /* scrollbar style 2 */
+
+  .cst-scrollbar-2::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 4px;
+  }
+
+  .cst-scrollbar-2::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+
+  .cst-scrollbar-2::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(
+      --gradient,
+      linear-gradient(
+        49.26deg,
+        rgba(53.24, 123.81, 255, 1),
+        rgba(127.56, 183.36, 248.87, 1) 100%
+      )
+    );
+  }
+
+  /* scrollbar style 2 end */
+
+  /* table scrollbar design customize */
+  [data-slot="table-container"]::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  [data-slot="table-container"]::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  [data-slot="table-container"]::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  [data-slot="table-container"]::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  [data-slot="table-container"]::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  [data-slot="table-container"] {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+  }
+
+  .unlock-btn {
+    box-shadow:
+      -2px 2px 4px 0 rgba(67, 76, 98, 0.2),
+      2px -2px 4px 0 rgba(67, 76, 98, 0.2),
+      -2px -2px 4px 0 rgba(255, 255, 255, 0.9),
+      2px 2px 5px 0 rgba(67, 76, 98, 0.9);
+  }
+  /* Remove  autofill background and set text color to white */
+  .auto-fill-white-text {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+      background-color: transparent !important;
+      -webkit-text-fill-color: #fff !important;
+      transition: background-color 9999s ease-in-out 0s;
+    }
+  }
+}
