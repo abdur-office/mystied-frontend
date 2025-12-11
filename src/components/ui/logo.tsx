@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { useSidebar } from "@/providers/SidebarContext";
 import Image from "next/image";
 import Link from "next/link";
 import { LinkHTMLAttributes } from "react";
@@ -6,6 +7,7 @@ import { LinkHTMLAttributes } from "react";
 type LogoProps = React.HTMLAttributes<LinkHTMLAttributes<HTMLAnchorElement>>;
 
 const Logo = ({ className }: LogoProps) => {
+  const { isCollapsed } = useSidebar();
   return (
     <Link
       href="/"
@@ -15,7 +17,12 @@ const Logo = ({ className }: LogoProps) => {
       )}
     >
       <Image src="/svgs/logo.svg" alt="Auro" width={30} height={31} priority />
-      <span className="text-xl leading-normal font-semibold text-black dark:text-white">
+      <span
+        className={cn(
+          "text-xl leading-normal font-semibold text-black dark:text-white",
+          isCollapsed ? "hidden" : "block",
+        )}
+      >
         Auro
       </span>
     </Link>

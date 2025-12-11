@@ -4,6 +4,7 @@ import { menuConfig } from "@/lib/menuConfig";
 import { useSidebar } from "@/providers/SidebarContext";
 import { X } from "lucide-react";
 import SidebarItem from "./SidebarItem";
+import SidebarToggle from "./SidebarToggle";
 
 const AppSidebar = () => {
   const { isMobileOpen, isCollapsed, toggleMobileSidebar } = useSidebar();
@@ -18,9 +19,10 @@ const AppSidebar = () => {
       </div>
 
       {/* Sidebar menu */}
-      <div>
+      <div className="relative">
+        <SidebarToggle />
         <aside
-          className={`dark:bg-dark-1-card absolute top-0 left-0 z-50 flex h-max flex-col overflow-y-hidden rounded-[14px] bg-white duration-300 ease-linear xl:static xl:translate-x-0 dark:shadow-[inset_0_0_4px_0_#3B3849] ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} ${isCollapsed ? "w-fit" : "w-57"}`}
+          className={`dark:bg-dark-1-card absolute top-0 left-0 z-50 flex h-max flex-col overflow-y-hidden rounded-[14px] bg-white duration-300 ease-linear xl:static xl:translate-x-0 dark:shadow-[inset_0_0_4px_0_#3B3849] ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} ${isCollapsed ? "w-[58px]" : "w-57"}`}
         >
           {/* <!-- SIDEBAR HEADER --> */}
           <div className="mb-3 flex items-center justify-between gap-2 px-3 py-5 xl:hidden">

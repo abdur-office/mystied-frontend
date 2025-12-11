@@ -8,6 +8,7 @@
   /* fonts */
   --font-primary: var(--font-univaNova);
   --font-manrope: var(--font-manrope);
+  --font-secondary: var(--font-sfProRounded);
 
   /* colors */
   --color-background: var(--background);
@@ -63,6 +64,7 @@
   --color-dark-1-card: var(--dark-1-card);
   --color-dark-2-card: var(--dark-2-card);
   --color-theme-graphite: var(--theme-graphite);
+  --color-common-text: var(--common-text);
 }
 
 :root {
@@ -118,7 +120,7 @@
   --paragraph: #7c797e;
   --dark-1-card: #1a1c1e;
   --dark-2-card: #282a2f;
-  --theme-graphite: #373a41;
+  --common-text: #141414;
 }
 
 .dark {

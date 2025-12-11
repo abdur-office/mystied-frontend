@@ -18,7 +18,7 @@ export default function UserActivity({
     >
       <div
         onClick={() => setView(!view)}
-        className="shadow-[inset_0_5px_10px_0_rgba(168,130,207,0.15), inset_0_5px_10px_0_rgba(168,130,207,0.10)] flex cursor-pointer items-center justify-between gap-2 rounded-2xl border border-[#d1d1d1] bg-[#E1E3E9] px-1.5 py-1 lg:rounded-[22px] lg:px-[10px] lg:py-1.5 dark:border-[#413F47] dark:bg-[#282A2F]"
+        className="user-activity-card-gradient flex cursor-pointer items-center justify-between gap-2 rounded-2xl border border-[#d1d1d1] bg-[#E1E3E9] px-1.5 py-1 lg:rounded-[22px] lg:px-[10px] lg:py-1.5 dark:border-[#413F47] dark:bg-[#282A2F]"
       >
         <div className="flex items-center gap-2">
           <div>

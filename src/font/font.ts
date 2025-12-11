@@ -1,4 +1,3 @@
-import { Inter, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 
 // primary font
@@ -87,21 +86,57 @@ const univaNova = localFont({
   ],
   variable: "--font-univaNova",
 });
+/*
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+ src: url("060fd297f19446447a9a1325ad5b889b.eot");
+    src: url("060fd297f19446447a9a1325ad5b889b.eot?#iefix")format("embedded-opentype"),
+        url("060fd297f19446447a9a1325ad5b889b.woff")format("woff"),
+        url("060fd297f19446447a9a1325ad5b889b.woff2")format("woff2"),
+        url("060fd297f19446447a9a1325ad5b889b.ttf")format("truetype"),
+        url("060fd297f19446447a9a1325ad5b889b.svg#SF Pro Rounded")format("svg");
+*/
+const sfProRounded = localFont({
+  src: [
+    {
+      path: "../../public/fonts/sf-pro-rounded/060fd297f19446447a9a1325ad5b889b.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/sf-pro-rounded/060fd297f19446447a9a1325ad5b889b.woff2",
+      weight: "400",
+      style: "normal",
+    },
+
+    {
+      path: "../../public/fonts/sf-pro-rounded/sf-pro-rounded.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/sf-pro-rounded/sf-pro-rounded.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-sfProRounded",
 });
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-});
+// const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-inter",
+// });
+
+// const manrope = Manrope({
+//   subsets: ["latin"],
+//   variable: "--font-manrope",
+// });
 
 const font = {
   univaNova: univaNova.variable,
-  manrope: manrope.variable,
-  inter: inter.variable,
+  // manrope: manrope.variable,
+  // inter: inter.variable,
+  sfProRounded: sfProRounded.variable,
 };
 
 export default font;
