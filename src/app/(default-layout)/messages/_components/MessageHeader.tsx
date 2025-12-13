@@ -16,29 +16,38 @@ export default function MessageHeader() {
         </div>
         <div>
           <div className="mb-1 flex items-center gap-1">
-            <h3 className="text-common-text text-[17px] font-semibold tracking-[0.204px]">
+            <h3 className="text-common-text text-[17px] font-semibold tracking-[0.204px] dark:text-white">
               Rizky Pang
             </h3>
             <button>
-              <Edit2 variant="Broken" className="size-[18px] text-[#777777]" />
+              <Edit2
+                variant="Broken"
+                className="size-[18px] text-[#777777] dark:text-[#9B9A9D]"
+              />
             </button>
-            <p className="ms-1 mt-1 text-[10px] font-normal text-[#777777]">
+            <p className="ms-1 mt-1 text-[10px] font-normal text-[#777777] dark:text-[#9B9A9D]">
               (User's Original name)
             </p>
           </div>
-          <div className="flex items-center text-[10px] font-normal text-[#777777]">
+          <div className="flex items-center text-[10px] font-normal text-[#777777] dark:text-[#9B9A9D]">
             <p className="pe-3">Seen 6m ago</p>
 
             <span className="h-[12px] w-px bg-[#D0D0D0]"></span>
 
             <button className="px-2">
-              <StarIcon size={10} />
+              <StarIcon
+                size={10}
+                className="fill-[#9D80CF] dark:fill-[#719CD8]"
+              />
             </button>
 
             <span className="h-[12px] w-px bg-[#D0D0D0]"></span>
 
             <button className="px-2">
-              <BellIcon size={10} />
+              <BellIcon
+                size={10}
+                className="fill-[#9D80CF] dark:fill-[#719CD8]"
+              />
             </button>
 
             <span className="h-[12px] w-px bg-[#D0D0D0]"></span>

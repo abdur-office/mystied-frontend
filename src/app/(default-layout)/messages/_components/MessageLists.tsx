@@ -1,10 +1,14 @@
+"use client";
+
 import { FilterIcon } from "@/components/icons";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 import MessageList from "./MessageList";
 
 export default function MessageLists() {
   const filters = [
     {
-      icon: "https://i.ibb.co.com/DP8gSR64/1.png",
+      icon: "https://i.ibb.co.com/m560m1ZM/Ellipse-16969.png",
       name: "James",
       badge: "Rebill on",
       text: "preview text last text here",
@@ -12,7 +16,7 @@ export default function MessageLists() {
       time: "10:45 pm",
     },
     {
-      icon: "https://i.ibb.co.com/1YRPqNZM/2.png",
+      icon: "https://i.ibb.co.com/vCjqyZcX/Ellipse-16969-1.png",
       name: "John",
       badge: "EXPIRED",
       text: "Hi how arey ou blah blah",
@@ -20,7 +24,7 @@ export default function MessageLists() {
       time: "10:45 pm",
     },
     {
-      icon: "https://i.ibb.co.com/XQTsjjp/3.png",
+      icon: "https://i.ibb.co.com/jPw6n8s2/Ellipse-16969-2.png",
       name: "Jane",
       badge: "Rebill on",
       text: "test time blah blah",
@@ -28,7 +32,7 @@ export default function MessageLists() {
       time: "10:45 pm",
     },
     {
-      icon: "https://i.ibb.co.com/RGB4VDM2/1.png",
+      icon: "https://i.ibb.co.com/0jxSbBWk/Ellipse-16969-4.png",
       name: "James",
       badge: "Rebill on",
       text: "Here how are you ??",
@@ -36,52 +40,69 @@ export default function MessageLists() {
       time: "10:45 pm",
     },
   ];
-  {
-    /* /*
-<a href="https://ibb.co.com/RGB4VDM2"><img src="https://i.ibb.co.com/DP8gSR64/1.png" alt="1" border="0"></a>
-<a href="https://ibb.co.com/1YRPqNZM"><img src="https://i.ibb.co.com/bjNCBV1F/2.png" alt="2" border="0"></a>
-<a href="https://ibb.co.com/XQTsjjp"><img src="https://i.ibb.co.com/KPHqbb7/3.png" alt="3" border="0"></a>
-<a href="https://ibb.co.com/RGB4VDM2"><img src="https://i.ibb.co.com/DP8gSR64/1.png" alt="1" border="0"></a>
-*/
-  }
+
+  const tabs = [
+    {
+      id: "queue",
+      label: "Queue",
+      active: true,
+    },
+    {
+      id: "pinned",
+      label: "Pinned",
+      count: 5,
+    },
+    {
+      id: "online",
+      label: "Online now",
+      success: true,
+    },
+    {
+      id: "new",
+      label: "New Message",
+    },
+  ];
+  const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
     <div>
-      <div className="flex items-center justify-between border-b border-[#c7c7ccd2] px-[18px] py-2.5">
+      <div className="flex items-center justify-between border-b border-[#C7C7CC] px-[18px] py-2.5 dark:border-[#F6F6F81A]">
         <h2 className="text-base font-semibold text-black dark:text-white">
           Newest First
         </h2>
         <FilterIcon className="text-black dark:text-white" />
       </div>
-      <div className="pe-5">
-        <ul className="cst-scrollbar-3 mt-1 ml-5 flex flex-nowrap gap-2 overflow-x-auto pt-3 pb-0.5">
-          <li>
-            <button className="bg-common-text h-[27px] rounded-[6px] px-1.5 py-0.5 text-sm font-normal whitespace-nowrap text-white">
-              Queue
-            </button>
-          </li>
-          <li>
-            <button className="text-common-text relative h-[27px] rounded-[6px] bg-[#E5E5EA] px-1.5 py-0.5 text-sm font-normal whitespace-nowrap">
-              Pinned{" "}
-              <span className="bg-theme-success absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full text-xs text-[8px] font-normal text-white">
-                5
-              </span>
-            </button>
-          </li>
-          <li>
-            <button className="text-theme-success h-[27px] rounded-[6px] bg-[#E5E5EA] px-1.5 py-0.5 text-sm font-normal whitespace-nowrap">
-              Online now
-            </button>
-          </li>
-          <li>
-            <button className="text-common-text h-[27px] rounded-[6px] bg-[#E5E5EA] px-1.5 py-0.5 text-sm font-normal whitespace-nowrap">
-              New Message
-            </button>
-          </li>
+
+      <div className="hidden pe-0 sm:block sm:pe-5">
+        <ul className="cst-scrollbar-3 mt-1 ml-2 flex touch-pan-x flex-nowrap gap-2 overflow-x-auto overflow-y-hidden pt-3 pb-0.5 sm:ml-5">
+          {tabs.map((item) => (
+            <li key={item.id} className="shrink-0">
+              <button
+                onClick={() => setActiveTab(item)}
+                className={cn(
+                  `relative h-[27px] rounded-[6px] px-1.5 py-0.5 text-sm font-normal whitespace-nowrap select-none dark:bg-[#25242B] dark:text-white ${
+                    activeTab.id === item.id
+                      ? "bg-common-text dark:text-theme-success text-white"
+                      : item.success
+                        ? "text-theme-success bg-[#E5E5EA]"
+                        : "text-common-text bg-[#E5E5EA]"
+                  }`,
+                )}
+              >
+                {item.label}
+
+                {item.count && (
+                  <span className="bg-theme-success absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full text-[8px] font-normal text-white dark:bg-[#8D6CC8]">
+                    {item.count}
+                  </span>
+                )}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
 
-      <ul className="mt-4">
+      <ul className="sm:mt-4">
         {filters.map((filter, index) => (
           <li key={index}>
             <MessageList {...filter} />

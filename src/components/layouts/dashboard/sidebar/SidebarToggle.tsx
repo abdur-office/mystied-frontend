@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import { useSidebar } from "@/providers/SidebarContext";
 import { ChevronRight } from "lucide-react";
 
@@ -7,7 +8,10 @@ export default function SidebarToggle() {
   return (
     <button
       onClick={toggleCollapse}
-      className="theme-toggle-btn absolute top-[52px] -right-[52px] z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full"
+      className={cn(
+        "theme-toggle-btn absolute top-[52px] -right-[34px] z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full xl:flex",
+        isCollapsed ? "-right-[34px]" : "-right-[52px]",
+      )}
     >
       <ChevronRight
         className={`${isCollapsed ? "rotate-180" : ""} size-6 transition-all duration-300 ease-in-out`}

@@ -1,14 +1,15 @@
-import {
-  ImageIcon,
-  LinkIcon,
-  UserIcon,
-  VideoIcon,
-  VoiceIcon,
-} from "@/components/icons";
 import { ChatIcon } from "@/components/icons/Chat";
-import { ClockIcon } from "@/components/icons/Clock";
 import { ListIcon } from "@/components/icons/List";
 import { MoreIcon } from "@/components/icons/More";
+
+import {
+  AlarmClock,
+  Image as IMGIcon,
+  Link2,
+  Mic,
+  Smile,
+  Video,
+} from "lucide-react";
 import Image from "next/image";
 export default function MessageSend() {
   return (
@@ -59,7 +60,7 @@ export default function MessageSend() {
         <ul className="flex items-center gap-1">
           <li>
             <button className="size-5">
-              <UserIcon size={14} className="stroke-black text-white" />
+              <Smile className="size-3.5 text-[#9B9A9D]" />
             </button>
           </li>
           <li>
@@ -69,7 +70,7 @@ export default function MessageSend() {
           </li>
           <li>
             <button className="size-5">
-              <ClockIcon className="stroke-[#777777]" />
+              <AlarmClock className="size-3.5 text-[#9B9A9D]" />
             </button>
           </li>
           <li>
@@ -85,41 +86,42 @@ export default function MessageSend() {
         </ul>
       </div>
       <div>
-        <input
-          type="text"
+        <textarea
           placeholder="Type a message..."
-          className="w-full border-t border-[#303234] pt-2.5 text-xs font-normal text-black outline-none placeholder:text-[#9B9A9D]"
-        />
+          className="min-h-[30px] w-full border-t border-[#303234] pt-2.5 text-xs font-normal text-black outline-none placeholder:text-[#9B9A9D] dark:text-white"
+        ></textarea>
       </div>
       <div className="flex items-center justify-between">
         <ul className="flex items-center gap-1 *:inline-flex">
           <li>
             <button>
-              <ImageIcon size={14} className="fill-white text-white" />
+              <IMGIcon className="size-3.5 text-[#9B9A9D]" />
             </button>
           </li>
           <li>
             <button>
-              <VoiceIcon size={14} className="stroke-white text-white" />
+              <Mic className="size-3.5 text-[#9B9A9D]" />
             </button>
           </li>
           <li>
             <button>
-              <VideoIcon size={14} className="fill-[#9B9A9D] text-[#9B9A9D]" />
+              <Video className="size-3.5 text-[#9B9A9D]" />
             </button>
           </li>
           <li>
             <button>
-              <UserIcon size={14} className="fill-[#9B9A9D] text-[#9B9A9D]" />
+              <Smile className="size-3.5 text-[#9B9A9D]" />
             </button>
           </li>
           <li>
             <button>
-              <LinkIcon size={14} className="fill-[#9B9A9D] text-[#9B9A9D]" />
+              <Link2 className="size-3.5 text-[#9B9A9D]" />
             </button>
           </li>
           <li>
-            <button className="unlock-btn-2 h-[22px]! w-[30px]!">$</button>
+            <button className="unlock-btn-2 h-[22px]! w-[30px]! pt-0.5">
+              $
+            </button>
           </li>
         </ul>
         <div>

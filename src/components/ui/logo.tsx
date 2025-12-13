@@ -7,7 +7,7 @@ import { LinkHTMLAttributes } from "react";
 type LogoProps = React.HTMLAttributes<LinkHTMLAttributes<HTMLAnchorElement>>;
 
 const Logo = ({ className }: LogoProps) => {
-  const { isCollapsed } = useSidebar();
+  const { isCollapsed, isMobileOpen } = useSidebar();
   return (
     <Link
       href="/"
@@ -20,7 +20,7 @@ const Logo = ({ className }: LogoProps) => {
       <span
         className={cn(
           "text-xl leading-normal font-semibold text-black dark:text-white",
-          isCollapsed ? "hidden" : "block",
+          isCollapsed && !isMobileOpen ? "hidden" : "block",
         )}
       >
         Auro

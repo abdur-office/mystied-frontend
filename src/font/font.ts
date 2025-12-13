@@ -98,17 +98,6 @@ const univaNova = localFont({
 const sfProRounded = localFont({
   src: [
     {
-      path: "../../public/fonts/sf-pro-rounded/060fd297f19446447a9a1325ad5b889b.woff",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/sf-pro-rounded/060fd297f19446447a9a1325ad5b889b.woff2",
-      weight: "400",
-      style: "normal",
-    },
-
-    {
       path: "../../public/fonts/sf-pro-rounded/sf-pro-rounded.woff",
       weight: "400",
       style: "normal",
@@ -116,6 +105,11 @@ const sfProRounded = localFont({
     {
       path: "../../public/fonts/sf-pro-rounded/sf-pro-rounded.woff2",
       weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/sf-pro-rounded/sf-pro-rounded-medium.otf",
+      weight: "500",
       style: "normal",
     },
   ],

@@ -17,14 +17,14 @@ export default function MediaGallery() {
           Unlock for $102
         </button>
       </DialogTrigger>
-      <DialogContent className="h-[70vh] overflow-y-auto p-0 sm:max-w-[1027px]">
+      <DialogContent className="h-[70vh] overflow-y-auto rounded-[20px] border-none p-0 sm:max-w-[1027px]">
         <DialogHeader hidden>
           <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>
             Make changes to your profile here. Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
-        <div className="flex gap-[18px] bg-[#F0EEEE] p-5">
+        <div className="flex flex-col gap-3 bg-[#F0EEEE] p-3 sm:p-5 md:flex-row md:gap-[18px] dark:bg-[#131215]">
           {/* Sidebar */}
           <MediaGallerySidebar />
 

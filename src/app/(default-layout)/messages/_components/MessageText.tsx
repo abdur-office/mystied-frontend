@@ -11,7 +11,7 @@ export default function MessageText() {
           <button className="absolute bottom-0 -left-4">
             <EllipsisVertical className="size-[10px] text-[#777777]" />
           </button>
-          <p className="text-common-text mb-1.5 rounded-[10px] rounded-br-none bg-[#E5E5EA] px-2.5 py-3 text-sm font-normal">
+          <p className="text-common-text mb-1.5 rounded-[10px] rounded-br-none bg-[#E5E5EA] px-2.5 py-3 text-sm font-normal dark:bg-[#25242B] dark:text-white">
             Tha’ts nice that you got work after grad
           </p>
           <div className="flex items-center justify-end gap-1">
@@ -30,7 +30,7 @@ export default function MessageText() {
         <div className="w-fit">
           <div className="mb-1 flex items-end gap-3">
             <div className="relative">
-              <p className="text-common-text rounded-[10px] rounded-bl-none bg-[#E5E5EA] px-2.5 py-3 text-sm font-normal">
+              <p className="text-common-text rounded-[10px] rounded-bl-none bg-[#E5E5EA] px-2.5 py-3 text-sm font-normal dark:bg-[#25242B] dark:text-white">
                 Mm lucky i guess!
               </p>
             </div>
@@ -55,13 +55,13 @@ export default function MessageText() {
               <button className="absolute right-0 -bottom-1.5">
                 <VoiceIcon />
               </button>
-              <p className="text-common-text rounded-[10px] rounded-bl-none bg-[#E5E5EA] px-2.5 py-3 text-sm font-normal">
+              <p className="text-common-text rounded-[10px] rounded-bl-none bg-[#E5E5EA] px-2.5 py-3 text-sm font-normal dark:bg-[#25242B] dark:text-white">
                 Nothing much haha just winding down
               </p>
             </div>
             <div className="flex items-center">
               <button className="-me-0.5">
-                <EllipsisVertical className="size-[14px] text-[#777777]" />
+                <EllipsisVertical className="size-[14px] text-[#777777] dark:text-[#9B9A9D]" />
               </button>
               <button>
                 <Heart2Icon size={16} />
@@ -92,9 +92,13 @@ export default function MessageText() {
               </button> */}
               <MediaGallery />
             </div>
-            <div className="rounded-br-[10px] bg-[#24282C] px-2 py-2.5">
-              <p>THE XXX-OF CHALLENGE</p>
-              <p>(XXX) Hello meow meow words hello</p>
+            <div className="rounded-br-[10px] bg-[#E5E5EA] px-2 py-2.5 dark:bg-[#24282C]">
+              <p className="text-common-text text-sm dark:text-white">
+                THE XXX-OF CHALLENGE
+              </p>
+              <p className="text-common-text text-sm dark:text-white">
+                (XXX) Hello meow meow words hello
+              </p>
             </div>
           </div>
           <p className="text-[9px] font-normal text-[#9B9A9D]">10:45 pm</p>

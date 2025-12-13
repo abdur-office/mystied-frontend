@@ -7,7 +7,7 @@
     @apply font-secondary;
 
     /* Scale page to 1440px */
-    zoom: 1.333;
+    /* zoom: 1.333; */
 
     /* Background */
     background: linear-gradient(#dcddeb 0%, #9ba2b2 100%);
@@ -18,6 +18,41 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+
+    /* Background blur */
+    position: relative;
+    z-index: 1;
+    &::before {
+      z-index: -1;
+      content: "";
+      background: #7779ee;
+      opacity: 0.7;
+      filter: blur(107px);
+      width: 194px;
+      height: 191px;
+      position: absolute;
+      top: 10%;
+      left: 22%;
+      @media screen {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      width: 228px;
+      height: 81px;
+      background: #eddbed;
+      opacity: 0.4;
+      filter: blur(71px);
+      position: absolute;
+      top: 10%;
+      left: 22%;
+      z-index: -1;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
   }
 
   .dark {

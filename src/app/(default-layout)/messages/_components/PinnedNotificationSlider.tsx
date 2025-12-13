@@ -64,8 +64,8 @@ export default function PostCartImage() {
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={index} className="relative">
-              <div className="max-w-[180px] ps-10 pt-5">
-                <p className="text-[17px] font-semibold tracking-[0.187px] text-[#947DCB]">
+              <div className="max-w-[190px] ps-10 pt-5">
+                <p className="text-[17px] font-medium tracking-[0.187px] text-[#947DCB] dark:text-[#FFED77]">
                   {slide.text}
                 </p>
                 <button className="edit-btn absolute right-2 bottom-0">

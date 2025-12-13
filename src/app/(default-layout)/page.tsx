@@ -24,7 +24,9 @@ const Page = () => {
           </h2>
         </div>
 
-        <AppSearch />
+        <div className="hidden xl:block">
+          <AppSearch />
+        </div>
       </header>
       <div className="flex flex-col gap-[1.50%] sm:flex-row">
         <div className="w-full space-y-4 sm:w-[63%]">

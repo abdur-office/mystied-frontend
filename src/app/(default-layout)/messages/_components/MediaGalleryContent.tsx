@@ -1,14 +1,9 @@
 "use client";
 import { VideoPlay } from "@/components/icons";
 import { SearchNormal } from "iconsax-reactjs";
-import {
-  Circle,
-  Download,
-  Mic,
-  Settings,
-  Video as VideoFileIcon,
-} from "lucide-react";
+import { Circle, Download, Mic, Video as VideoFileIcon } from "lucide-react";
 import { useState } from "react";
+import { MediaSettingDialog } from "./MediaSettingDialog";
 export default function MediaGalleryContent() {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -99,11 +94,11 @@ export default function MediaGalleryContent() {
   ];
 
   return (
-    <div className="flex-1 overflow-y-auto rounded-[20px] bg-[#E5E5EA] py-3">
+    <div className="flex-1 rounded-[20px] bg-[#E5E5EA] py-3 dark:bg-[#1A1C1E]">
       {/* Header */}
       <div className="px-4">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-common-text mb-2 text-base font-semibold">
+          <h2 className="text-common-text mb-2 text-base font-semibold dark:text-white">
             All Media
           </h2>
           <button>
@@ -112,15 +107,15 @@ export default function MediaGalleryContent() {
         </div>
 
         {/* Filter Tabs */}
-        <div className="mb-4 flex gap-2">
+        <div className="mb-4 flex flex-wrap gap-2">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`rounded-lg px-2.5 py-[5px] text-sm font-medium transition-colors ${
+              className={`rounded-lg px-2.5 py-[5px] text-sm font-normal transition-colors ${
                 activeFilter === filter
                   ? "bg-[#141414] text-white"
-                  : "bg-[#AEAEB2] text-[#141414] hover:bg-[#AEAEB2]"
+                  : "bg-[#AEAEB2] text-[#141414] hover:bg-[#AEAEB2] dark:bg-[#2A2A2D] dark:text-white"
               }`}
             >
               {filter}
@@ -132,20 +127,20 @@ export default function MediaGalleryContent() {
         <input
           type="text"
           placeholder="Type a message..."
-          className="text-common-text w-full text-xs outline-none placeholder:text-[#9B9A9D]"
+          className="text-common-text w-full pb-3 text-xs outline-none placeholder:text-[#9B9A9D] dark:text-[#9B9A9D]"
         />
       </div>
 
       {/* Processing Status */}
-      <div className="bg-[#D1D1D6] px-6 py-3">
-        <p className="text-common-text text-center text-xs">
+      <div className="bg-[#D1D1D6] px-6 py-3 dark:bg-[#2C2832]">
+        <p className="text-common-text text-center text-xs dark:text-[#9B9A9D]">
           16 files processed...
         </p>
       </div>
 
       {/* Media Grid */}
       <div>
-        <div className="grid grid-cols-1 gap-1.5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
           {mediaItems.map((item) => (
             <div key={item.id} className="group relative">
               {/* Media Card */}
@@ -164,15 +159,14 @@ export default function MediaGalleryContent() {
                     <span className="rounded-md bg-[#DEDDE63D] px-2.5 py-1 text-xs font-normal text-white">
                       {item.date}
                     </span>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center">
                       <button className="rounded p-1 text-white hover:bg-white/20">
                         <Download className="h-4 w-4" />
                       </button>
+                      <MediaSettingDialog />
+
                       <button className="rounded p-1 text-white hover:bg-white/20">
-                        <Settings className="h-4 w-4" />
-                      </button>
-                      <button className="rounded p-1 text-white hover:bg-white/20">
-                        <Circle className="h-5 w-5" />
+                        <Circle className="size-4" />
                       </button>
                     </div>
                   </div>

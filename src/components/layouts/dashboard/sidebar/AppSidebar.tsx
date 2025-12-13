@@ -20,9 +20,15 @@ const AppSidebar = () => {
 
       {/* Sidebar menu */}
       <div className="relative">
+        {/* Mobile overlay */}
+        <div
+          className={`fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 xl:hidden ${isMobileOpen ? "visible opacity-100" : "invisible opacity-0"}`}
+          onClick={toggleMobileSidebar}
+          aria-hidden="true"
+        ></div>
         <SidebarToggle />
         <aside
-          className={`dark:bg-dark-1-card absolute top-0 left-0 z-50 flex h-max flex-col overflow-y-hidden rounded-[14px] bg-white duration-300 ease-linear xl:static xl:translate-x-0 dark:shadow-[inset_0_0_4px_0_#3B3849] ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} ${isCollapsed ? "w-[58px]" : "w-57"}`}
+          className={`dark:bg-dark-1-card fixed inset-y-0 left-0 z-50 flex h-screen flex-col overflow-y-hidden bg-[#F0EEEE] duration-300 ease-linear xl:static xl:h-auto xl:translate-x-0 xl:rounded-[14px] dark:shadow-[inset_0_0_4px_0_#3B3849] ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} ${isCollapsed && !isMobileOpen ? "w-[58px]" : "w-57"}`}
         >
           {/* <!-- SIDEBAR HEADER --> */}
           <div className="mb-3 flex items-center justify-between gap-2 px-3 py-5 xl:hidden">
@@ -33,7 +39,7 @@ const AppSidebar = () => {
               aria-controls="sidebar"
               aria-expanded={isMobileOpen}
             >
-              <X className="size-5" />
+              <X className="size-5 text-black dark:text-white" />
             </button>
           </div>
           {/* <!-- SIDEBAR HEADER --> */}
