@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import QueueCalendar from "./_components/QueueCalendar";
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: "Queue",
 };
 
 const Page = () => {

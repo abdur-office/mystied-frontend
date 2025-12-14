@@ -11,7 +11,7 @@ const CstCard = ({ children, className, isHideGradient }: CstCardProps) => {
   return (
     <div
       className={cn(
-        "cst-gradient-main relative overflow-hidden min-h-[714px] p-5",
+        "rounded-[20px] bg-[#F0EEEE] pb-7 dark:bg-[#1A1C1E] dark:shadow-[inset_0_0_4px_0_#3B3849]",
         className,
       )}
     >

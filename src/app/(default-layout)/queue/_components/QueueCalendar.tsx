@@ -1,5 +1,6 @@
 "use client";
 
+import CstCard from "@/components/ui/CstCard";
 import {
   ArrowLeft,
   ArrowLeft2,
@@ -76,7 +77,7 @@ const QueueCalendar = () => {
   const days = getDaysInMonth(currentDate);
 
   return (
-    <div className="w-full space-y-4 rounded-[20px] bg-[#F0EEEE] pb-7 dark:bg-[#1A1C1E] dark:shadow-[inset_0_0_4px_0_#3B3849]">
+    <CstCard className="w-full space-y-4 pb-7">
       {/* Header */}
       <div className="mb-6 flex items-center justify-between border-b border-white/10 px-[18px] py-2">
         <div className="flex items-center gap-3.5">
@@ -177,7 +178,7 @@ const QueueCalendar = () => {
           })}
         </div>
       </div>
-    </div>
+    </CstCard>
   );
 };
 
