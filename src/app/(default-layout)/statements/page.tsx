@@ -1,7 +1,7 @@
 import AppSearch from "@/components/layouts/dashboard/header/AppSearch";
 import { Calendar2 } from "iconsax-reactjs";
 import { Metadata } from "next";
-import QueueCalendarSection from "./_components/QueueCalendarSection";
+import TabList from "./_components/TabList";
 
 export const metadata: Metadata = {
   title: "Queue",
@@ -15,7 +15,7 @@ const Page = () => {
         <div className="flex items-center gap-2">
           <Calendar2 variant="Broken" className="text-black dark:text-white" />
           <h2 className="text-[23px] font-semibold text-black dark:text-white">
-            Queue
+            Statements
           </h2>
         </div>
 
@@ -24,7 +24,9 @@ const Page = () => {
         </div>
       </header>
 
-      <QueueCalendarSection />
+      <div>
+        <TabList />
+      </div>
     </div>
   );
 };

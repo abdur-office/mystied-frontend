@@ -51,7 +51,7 @@ export const menuConfig = [
   },
   {
     label: "Statements",
-    path: "/statements",
+    path: APP_ROUTES.STATEMENTS,
     icon: ChartSquare,
     iconVariant: "Broken",
   },

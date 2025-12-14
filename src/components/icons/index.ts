@@ -15,6 +15,7 @@ export * from "./Eye";
 export * from "./File";
 export * from "./FilesIcon";
 export * from "./Filter";
+export * from "./FilterBigAlt";
 export * from "./FingerPrint";
 export * from "./Gif";
 export * from "./Google";
@@ -46,5 +47,6 @@ export * from "./Voice";
 export * from "./WarningTraingle";
 export * from "./X";
 export * from "./X2";
+
 // ADD IN TYPOGRAPHY PAGE PLEASE
 // theme-icons.tsx

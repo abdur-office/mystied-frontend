@@ -13,6 +13,7 @@ export const API_ENDPOINTS = {
 export const APP_ROUTES = {
   MESSAGES: "/messages",
   QUEUE: "/queue",
+  STATEMENTS: "/statements",
   // NEWS: {
   //   BASE: "/news",
   //   SOURCES: "/news/sources",

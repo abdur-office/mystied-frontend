@@ -10,6 +10,7 @@ import {
   EyeIcon,
   FileIcon,
   FilesIcon,
+  FilterBigAltIcon,
   FingerPrintIcon,
   GifIcon,
   GoogleIcon,
@@ -80,6 +81,7 @@ export const themeIcons: ThemeIcon[] = [
   { name: "VideoMdIcon", Icon: VideoMd },
   { name: "VideoPlayIcon", Icon: VideoPlay },
   { name: "UserScanIcon", Icon: UserScan },
+  { name: "FilterBigAlt", Icon: FilterBigAltIcon },
 ];
 
 export function ThemeIconsGrid() {

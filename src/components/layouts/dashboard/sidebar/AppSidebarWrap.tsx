@@ -30,7 +30,7 @@ export default function AppSidebarWrap({
           alt="bg-screen"
           width={300}
           height={100}
-          className="absolute top-12 left-40 z-[-1] h-[100px] w-[300px] object-cover"
+          className="absolute top-12 left-40 z-[-1] hidden h-[100px] w-[300px] object-cover lg:block"
         />
         {children}
       </main>
