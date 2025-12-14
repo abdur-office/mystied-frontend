@@ -1,7 +1,13 @@
 "use client";
 
-import { ArrowLeft, MessageNotif, Messages1 } from "iconsax-reactjs";
-import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowLeft2,
+  ArrowRight2,
+  MessageNotif,
+  Messages1,
+} from "iconsax-reactjs";
+import { Plus } from "lucide-react";
 import { useState } from "react";
 
 const QueueCalendar = () => {
@@ -99,13 +105,13 @@ const QueueCalendar = () => {
             onClick={previousMonth}
             className="rounded p-1.5 transition-colors hover:bg-white/10"
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ArrowLeft2 className="h-4 w-4" variant="Broken" />
           </button>
           <button
             onClick={nextMonth}
             className="rounded p-1.5 transition-colors hover:bg-white/10"
           >
-            <ChevronRight className="h-4 w-4" />
+            <ArrowRight2 className="h-4 w-4" variant="Broken" />
           </button>
           <span className="text-sm text-gray-400">
             {formatMonthYear(currentDate)}
