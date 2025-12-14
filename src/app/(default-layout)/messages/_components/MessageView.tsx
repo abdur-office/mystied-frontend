@@ -7,18 +7,18 @@ import MessageText from "./MessageText";
 export default function MessageView() {
   return (
     <div className="flex h-full gap-[1.50%]">
-      <div className="w-[98.50%] rounded-[22px] bg-[#F0EEEE] xl:w-[64%] dark:bg-[#1A1C1E]">
+      <div className="w-[98.50%] rounded-[22px] bg-[#F0EEEE] xl:w-[64%] dark:bg-[#1A1C1E] dark:shadow-[inset_0_0_4px_0_#3B3849]">
         {/* Message Header  */}
         <MessageHeader />
 
         <div className="flex h-12 items-center justify-between rounded-lg bg-[#4F794D] px-3 py-0.5">
-          <p className="text-common-text text-[13px] font-normal tracking-[0.156px] dark:text-white">
+          <p className="text-[13px] font-normal tracking-[0.156px] text-white">
             White Whale. he does IT job. He prefers to speak in Mandarin.
           </p>
           <button>
             <Edit2
               variant="Broken"
-              className="size-[18px] text-[#FFFFFF] dark:text-[#FFFFFF]"
+              className="text-common-text size-[18px] dark:text-white"
             />
           </button>
         </div>

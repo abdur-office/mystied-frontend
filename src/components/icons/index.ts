@@ -38,6 +38,7 @@ export * from "./Star";
 export * from "./Twitter";
 export * from "./Undo";
 export * from "./User";
+export * from "./UserScan";
 export * from "./Video";
 export * from "./VideoMd";
 export * from "./VideoPlay";

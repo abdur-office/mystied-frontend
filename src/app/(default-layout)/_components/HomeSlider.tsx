@@ -47,7 +47,7 @@ export default function SlideStatus() {
                 <div className="absolute right-0 bottom-[70px] left-6 max-w-[350px]">
                   <Link
                     href="/"
-                    className="line-clamp-2 text-[30px] leading-[120%] font-semibold tracking-[0.33px] text-white"
+                    className="line-clamp-2 text-[30px] leading-[120%] font-medium tracking-[0.33px] text-white"
                   >
                     Cheerleader Ahn Ji-hyun, the goddess of innocence
                   </Link>

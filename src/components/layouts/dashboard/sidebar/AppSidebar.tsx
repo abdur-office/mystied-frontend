@@ -47,7 +47,7 @@ const AppSidebar = () => {
           <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
             {/* <!-- Sidebar Menu --> */}
             <nav>
-              <ul className="flex flex-col gap-2 py-2">
+              <ul className="flex flex-col gap-1.5 py-2">
                 {menuConfig?.map((menuItem, menuIndex) => (
                   <SidebarItem key={menuIndex} item={menuItem} />
                 ))}

@@ -7,7 +7,7 @@ const AppSearch = () => {
   return (
     <div>
       <form onSubmit={handleSearch}>
-        <div className="dark:bg-dark-1-card relative flex h-12 items-center justify-between rounded-full bg-white px-4 py-3 lg:w-[311px]">
+        <div className="dark:bg-dark-1-card relative flex h-12 items-center justify-between rounded-full bg-[#F0EEEE] px-4 py-3 lg:w-[311px]">
           <input
             className="placeholder:text-theme-gray w-full pl-8 text-base text-black outline-none dark:text-white"
             name="search"

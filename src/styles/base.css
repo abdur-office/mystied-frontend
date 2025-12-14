@@ -7,7 +7,7 @@
     @apply font-secondary;
 
     /* Scale page to 1440px */
-    /* zoom: 1.333; */
+    zoom: 1.333;
 
     /* Background */
     background: linear-gradient(#dcddeb 0%, #9ba2b2 100%);
@@ -33,7 +33,7 @@
       position: absolute;
       top: 10%;
       left: 22%;
-      @media screen {
+      @media screen and (max-width: 768px) {
         display: none;
       }
     }
@@ -57,7 +57,11 @@
 
   .dark {
     body {
-      background: var(--background);
+      background: linear-gradient(
+        0deg,
+        rgba(21, 21, 21, 0.89) 0%,
+        rgba(21, 21, 21, 0.89) 100%
+      );
     }
   }
 

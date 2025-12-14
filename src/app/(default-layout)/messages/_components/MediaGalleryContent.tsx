@@ -96,16 +96,19 @@ export default function MediaGalleryContent() {
   return (
     <div className="flex-1 rounded-[20px] bg-[#E5E5EA] py-3 dark:bg-[#1A1C1E]">
       {/* Header */}
-      <div className="px-4">
-        <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-common-text mb-2 text-base font-semibold dark:text-white">
-            All Media
-          </h2>
-          <button>
-            <SearchNormal variant="Broken" className="size-6 text-gray-400" />
-          </button>
-        </div>
+      <div className="mb-4 flex items-center justify-between border-b border-[#C7C7CC] px-4 pb-2 dark:border-white/10">
+        <h2 className="text-common-text mb-2 text-base font-semibold dark:text-white">
+          All Media
+        </h2>
+        <button>
+          <SearchNormal
+            variant="Broken"
+            className="size-6 text-gray-400 dark:text-white"
+          />
+        </button>
+      </div>
 
+      <div className="px-4">
         {/* Filter Tabs */}
         <div className="mb-4 flex flex-wrap gap-2">
           {filters.map((filter) => (

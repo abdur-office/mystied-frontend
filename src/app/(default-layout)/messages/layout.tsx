@@ -16,7 +16,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </header>
       <div>
         <div className="flex flex-col gap-[1.50%] md:flex-row">
-          <div className="w-full space-y-4 rounded-[20px] bg-[#F0EEEE] pb-7 md:w-[33.50%] lg:w-[23.50%] dark:bg-[#1A1C1E]">
+          <div className="w-full space-y-4 rounded-[20px] bg-[#F0EEEE] pb-7 md:w-[33.50%] lg:w-[23.50%] dark:bg-[#1A1C1E] dark:shadow-[inset_0_0_4px_0_#3B3849]">
             <MessageLists />
           </div>
           {children}

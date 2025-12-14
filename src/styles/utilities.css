@@ -128,6 +128,43 @@
     scrollbar-color: #888 transparent;
   }
 
+  .cst-gradient-main {
+    border-radius: 20px;
+    border: 1px solid transparent;
+  }
+  /* Light theme */
+  .cst-gradient-main {
+    background-color: var(--color-dark-1-card);
+  }
+  /* Dark theme */
+  .dark .cst-gradient-main {
+    --bg: var(--color-dark-1-card);
+    --gradG: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #413f47 100%);
+
+    background-image: linear-gradient(var(--bg), var(--bg)), var(--gradG);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .cst-gradient-card {
+    border-radius: 22px;
+    border: 1px solid transparent;
+    box-shadow: inset 0 5px 10px 0 rgba(168, 130, 207, 0.1);
+  }
+  /* Light theme */
+  .cst-gradient-card {
+    background-color: var(--color-dark-2-card);
+  }
+  /* Dark theme */
+  .dark .cst-gradient-card {
+    --bg: var(--color-dark-2-card);
+    --grad: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #413f47 100%);
+
+    background-image: linear-gradient(var(--bg), var(--bg)), var(--grad);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+  }
+
   /* unlock button */
   .unlock-btn {
     box-shadow:
@@ -153,11 +190,28 @@
     font-weight: 400;
     border-radius: 1000px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background: #6b49d3;
+    background: #8d6cc8;
     box-shadow:
-      1px 1px 1px 0 rgba(40, 24, 86, 0.5) inset,
+      0px 1px 1px 0 rgba(40, 24, 86, 0.5) inset,
       -1px -1px 3px 0 rgba(40, 24, 86, 0.2) inset,
-      -1px 1px 3px 0 rgba(185, 180, 198, 0.9) inset;
+      -1px 1px 1px 0 rgba(235, 235, 237, 0.9) inset;
+  }
+  .unlock-btn-3 {
+    color: #fff;
+    background: #b39fd766;
+    border: 1px solid #ffffff1a;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    padding: 4px 6px;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    box-shadow:
+      inset 0 1px 1px #7877cc,
+      inset 0 0 8px #3d3c99,
+      inset 1px 2px 2px #7877cc;
   }
 
   /* Remove  autofill background and set text color to white */
@@ -199,6 +253,17 @@
       0 5px 10px 0 rgba(164, 129, 233, 0.15) inset,
       0 5px 10px 0 rgba(115, 136, 194, 0.35) inset;
   }
+
+  .dark .user-activity-card-gradient {
+    border: 1px solid #413f47;
+    background: #232428;
+    box-shadow:
+      0 5px 10px 0 rgba(164, 129, 233, 0.15) inset,
+      0 5px 10px 0 rgba(115, 136, 194, 0.35) inset,
+      0 5px 10px 0 rgba(168, 130, 207, 0.15) inset,
+      0 5px 10px 0 rgba(168, 130, 207, 0.15) inset;
+  }
+
   .theme-toggle-btn {
     background: #fff;
     box-shadow:
@@ -216,7 +281,7 @@
   }
 
   .message-send-btn {
-    background: url("/images/btn-bg.png") no-repeat center center;
+    background: url("/images/btn-bg-2.png") no-repeat center center;
     background-size: contain;
     color: #fff;
     font-size: 14px;
@@ -247,5 +312,37 @@
   .drop-filter-blur {
     background: rgba(0, 0, 0, 0.26);
     backdrop-filter: blur(14.5px);
+  }
+
+  .send-tips-btn {
+    position: relative;
+    display: flex;
+    height: 36px;
+    padding: 4px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #8285cf 0%, #81829e 100%);
+    box-shadow:
+      -1px 1px 2px 0 rgba(220, 187, 232, 0.2),
+      1px -1px 2px 0 rgba(211, 211, 211, 0.2),
+      -1px -1px 2px 0 rgba(255, 255, 255, 0.9),
+      1px 1px 3px 0 rgba(211, 211, 211, 0.9);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 95.5%;
+      height: 90%;
+      border-radius: 6px;
+      border-radius: 6px;
+      background: linear-gradient(180deg, #8285cf 0%, #abadd1 100%);
+      box-shadow:
+        inset 0px 1px 1px #ffffff4d,
+        inset 1px -1px 3px #bcbcbc80;
+      z-index: 2;
+    }
   }
 }

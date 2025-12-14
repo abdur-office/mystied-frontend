@@ -89,7 +89,7 @@ export default function MessageHeader() {
         <button>
           <More
             variant="Linear"
-            className="size-[18px] rotate-90 text-[#777777]"
+            className="size-6 rotate-90 text-[#777777] dark:text-white"
           />
         </button>
       </div>

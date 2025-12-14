@@ -70,7 +70,7 @@ export default function MessageLists() {
         <h2 className="text-base font-semibold text-black dark:text-white">
           Newest First
         </h2>
-        <FilterIcon className="text-black dark:text-white" />
+        <FilterIcon className="stroke-[#A4A5A8] dark:stroke-white" />
       </div>
 
       <div className="hidden pe-0 sm:block sm:pe-5">

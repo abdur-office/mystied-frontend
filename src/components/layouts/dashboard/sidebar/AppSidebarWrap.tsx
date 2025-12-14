@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { useSidebar } from "@/providers/SidebarContext";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import AppSidebar from "./AppSidebar";
 
 export default function AppSidebarWrap({
@@ -19,12 +20,18 @@ export default function AppSidebarWrap({
             type="button"
             onClick={toggleMobileSidebar}
             aria-label="Toggle sidebar"
-            className="dark:bg-dark-1-card flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 transition hover:shadow-md dark:text-white dark:ring-white/10"
+            className="dark:bg-dark-1-card flex h-10 w-10 items-center justify-center rounded-full bg-[#F0EEEE] shadow-sm ring-1 ring-black/5 transition hover:shadow-md dark:text-white dark:ring-white/10"
           >
             <Menu className="size-5 text-black dark:text-white" />
           </button>
         </div>
-        <span className="body-drop-shadw"></span>
+        <Image
+          src="/images/star.png"
+          alt="bg-screen"
+          width={300}
+          height={100}
+          className="absolute top-12 left-40 z-[-1] h-[100px] w-[300px] object-cover"
+        />
         {children}
       </main>
     </div>

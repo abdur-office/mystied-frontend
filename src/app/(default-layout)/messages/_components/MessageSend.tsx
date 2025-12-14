@@ -88,7 +88,7 @@ export default function MessageSend() {
       <div>
         <textarea
           placeholder="Type a message..."
-          className="min-h-[30px] w-full border-t border-[#303234] pt-2.5 text-xs font-normal text-black outline-none placeholder:text-[#9B9A9D] dark:text-white"
+          className="min-h-[30px] w-full border-t border-[#C7C7CC] pt-2.5 text-xs font-normal text-black outline-none placeholder:text-[#9B9A9D] dark:border-[#303234] dark:text-white"
         ></textarea>
       </div>
       <div className="flex items-center justify-between">

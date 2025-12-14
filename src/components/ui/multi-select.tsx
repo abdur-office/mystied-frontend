@@ -9,8 +9,8 @@ import {
   CommandList,
 } from "@/components/ui/command";
 import { Command as CommandPrimitive } from "cmdk";
-import { X } from "lucide-react";
 import * as React from "react";
+import { XIcon } from "../icons";
 export type MultiSelectOption = {
   value: string;
   label: string;
@@ -58,20 +58,23 @@ export function MultiSelect({
   return (
     <div className={`w-full ${className}`}>
       <Command className="overflow-visible border-none bg-transparent">
-        <div className="focus-within:ring-theme-purple rounded-md border border-[#C7C7CC] bg-transparent px-1.5 py-[4px] text-sm focus-within:ring-1">
+        <div className="focus-within:ring-theme-purple rounded-md border border-[#C7C7CC] bg-[#35363B] px-1.5 py-[4px] text-sm focus-within:ring-1 dark:border-[#868487]">
           <div className="flex flex-wrap gap-1">
             {value.map((item) => (
               <Badge
                 key={item.value}
                 variant="gray"
-                className="text-common-text h-[18px] rounded-sm px-1 py-0.5 text-[10px] font-normal tracking-[0.12px] select-none dark:bg-[#3A3A3C] dark:text-white"
+                className="text-common-text h-[18px] rounded-sm px-1 py-0.5 text-[10px] font-normal tracking-[0.12px] select-none dark:bg-[#4B4C51] dark:text-white"
               >
                 {item.label}
                 <span
                   onMouseDown={(e) => e.preventDefault()}
                   onClick={() => handleUnselect(item)}
                 >
-                  <X className="text-common-text ml-1 size-2 cursor-pointer hover:text-black dark:text-white" />
+                  <XIcon
+                    size={10}
+                    className="text-common-text stroke-paragraph ml-1 size-1.5 cursor-pointer hover:stroke-black dark:stroke-white"
+                  />
                 </span>
               </Badge>
             ))}

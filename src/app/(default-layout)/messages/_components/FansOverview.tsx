@@ -5,18 +5,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Edit2 } from "iconsax-reactjs";
 import Image from "next/image";
+import SelectYourRegion from "./SelectYourRegion";
+import TimezoneDialog from "./TimeZoneDialog";
 export default function FansOverview() {
   return (
     <div className="px-5 py-6">
+      <TimezoneDialog />
       <div className="mb-5 flex items-center gap-1.5">
         <h4 className="text-common-text text-sm font-medium tracking-[0.168px] dark:text-white">
           Rizky Pang
         </h4>
-        <button>
-          <Edit2 variant="Broken" className="size-4 text-[#7C797E]" />
-        </button>
+        <SelectYourRegion />
       </div>
       <div className="mb-4 flex items-center gap-2">
         <p className="text-common-text inline-flex items-center rounded-[3px] bg-[#D1D1D6] px-[5px] py-0.5 text-xs font-normal tracking-[0.144px] dark:bg-[#35363B] dark:text-white">
@@ -57,7 +57,7 @@ export default function FansOverview() {
 
           <AccordionItem value="preferences" className="border-none">
             {/* HEADER */}
-            <AccordionTrigger className="rounded-lg bg-[#D1D1D6] px-2.5 py-[7px] hover:no-underline dark:bg-[#35363B]">
+            <AccordionTrigger className="rounded-lg border border-white/30 bg-[#D1D1D6] px-2.5 py-[7px] hover:no-underline dark:bg-[#35363B]">
               <p className="text-common-text text-xs font-normal tracking-[0.144px] dark:text-white">
                 Select topics of actives fan likes
               </p>
@@ -99,13 +99,13 @@ export default function FansOverview() {
         {/* ================= List ================= */}
         <div className="mt-5">
           {/* OUTSIDE TITLE */}
-          <p className="text-common-text mb-[5px] text-xs font-medium tracking-[0.144px] dark:text-white">
+          <p className="text-common-text mb-[5px] text-xs font-normal tracking-[0.144px] dark:text-white">
             List:
           </p>
 
           <AccordionItem value="list" className="border-none">
             {/* HEADER */}
-            <AccordionTrigger className="rounded-lg bg-[#D1D1D6] px-2.5 py-[7px] hover:no-underline dark:bg-[#35363B]">
+            <AccordionTrigger className="gap-2 rounded-lg border border-white/30 bg-[#D1D1D6] px-2.5 py-[7px] hover:no-underline dark:bg-[#35363B]">
               <div className="flex w-full items-center justify-between">
                 <p className="text-common-text text-xs font-medium tracking-[0.144px] dark:text-white">
                   Buying power
@@ -169,9 +169,7 @@ export default function FansOverview() {
         <p className="text-common-text text-xs font-normal tracking-[0.144px] dark:text-white">
           Fan Persona
         </p>
-        <button className="rounded-[3px] bg-[#7877CC] px-1.5 py-1 text-xs font-normal tracking-[0.144px] text-white dark:bg-[#947DCB] dark:text-white">
-          Generate AI Insight
-        </button>
+        <button className="unlock-btn-3">Generate AI Insight</button>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ export const API_ENDPOINTS = {
 // frontend page/url
 export const APP_ROUTES = {
   MESSAGES: "/messages",
-
+  QUEUE: "/queue",
   // NEWS: {
   //   BASE: "/news",
   //   SOURCES: "/news/sources",

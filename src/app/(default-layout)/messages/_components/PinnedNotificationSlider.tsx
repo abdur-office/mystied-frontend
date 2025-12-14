@@ -71,7 +71,7 @@ export default function PostCartImage() {
                 <button className="edit-btn absolute right-2 bottom-0">
                   <Edit2
                     variant="Broken"
-                    className="text-common-text size-[22px]"
+                    className="text-common-text size-[22px] dark:text-white"
                   />
                 </button>
               </div>

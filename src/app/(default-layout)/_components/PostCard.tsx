@@ -1,9 +1,4 @@
-import {
-  BookmarkIcon,
-  Comment1Icon,
-  LikeFieldIcon,
-  SendIcon,
-} from "@/components/icons";
+import { Comment1Icon, LikeFieldIcon, SendIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Flag, More } from "iconsax-reactjs";
+import { Bookmark } from "lucide-react";
 import Image from "next/image";
 import PostCartImage from "./PostCartImage";
 export default function PostCard() {
@@ -83,12 +79,17 @@ export default function PostCard() {
           <LikeFieldIcon className="text-theme-danger fill-theme-danger" />
           <Comment1Icon className="size-6 fill-black dark:fill-white" />
           <SendIcon className="size-6 fill-black dark:fill-white" />
-          <button className="shadow-[ -1px_1px_2px_0_rgba(220,187,232,0.2), 1px_-1px_2px_0_rgba(211,211,211,0.2), -1px_-1px_2px_0_rgba(255,255,255,0.9), 1px_1px_3px_0_rgba(211,211,211,0.9) ] h-[34px] w-[100px] bg-[url('/svgs/button.svg')] bg-contain bg-center bg-no-repeat text-base font-normal tracking-[0.192px] text-black">
+          <button className="h-[34px] w-[100px] bg-[url('/images/btn-tips.png')] bg-contain bg-center bg-no-repeat text-base font-normal tracking-[0.192px] text-black">
             Send Tips
           </button>
         </div>
         <div>
-          <BookmarkIcon className="size-6 fill-black stroke-black dark:fill-white dark:stroke-white" />
+          <button>
+            <Bookmark
+              strokeWidth={1}
+              className="size-6 text-black dark:text-white"
+            />
+          </button>
         </div>
       </div>
     </div>

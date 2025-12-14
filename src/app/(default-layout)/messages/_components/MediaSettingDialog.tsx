@@ -149,7 +149,7 @@ export function MediaSettingDialog() {
                       rows={4}
                       placeholder="Add a short description"
                       {...field}
-                      className="text-common-text min-h-[46px] border border-[#C7C7CC] bg-transparent text-[12px] font-normal tracking-[0.144px] md:text-[10px]"
+                      className="text-common-text min-h-[46px] border border-[#C7C7CC] bg-[#35363B] text-[12px] font-normal tracking-[0.144px] md:text-[10px] dark:border-[#868487] dark:bg-[#25242B] dark:text-white"
                     />
                   </FormControl>
                   <FormMessage />
@@ -173,7 +173,7 @@ export function MediaSettingDialog() {
                       min="0"
                       placeholder="0.00"
                       {...field}
-                      className="text-common-text h-[30px] border border-[#C7C7CC] bg-transparent text-[12px] font-normal tracking-[0.144px] md:text-[10px]"
+                      className="text-common-text h-[30px] border border-[#C7C7CC] bg-[#35363B] text-[12px] font-normal tracking-[0.144px] md:text-[10px] dark:border-[#868487] dark:bg-[#25242B] dark:text-white"
                     />
                   </FormControl>
                   <FormMessage />

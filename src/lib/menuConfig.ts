@@ -3,9 +3,10 @@ import {
   ChartSquare,
   FavoriteChart,
   Flag,
+  HomeHashtag,
   Image,
-  MessageNotif,
   More2,
+  ProfileCircle,
   ReceiptAdd,
   SmsNotification,
 } from "iconsax-reactjs";
@@ -15,7 +16,7 @@ export const menuConfig = [
   {
     label: "Home",
     path: "/",
-    icon: MessageNotif,
+    icon: HomeHashtag,
     iconVariant: "Broken",
   },
   {
@@ -44,7 +45,7 @@ export const menuConfig = [
   },
   {
     label: "Queue",
-    path: "/queue",
+    path: APP_ROUTES.QUEUE,
     icon: Calendar2,
     iconVariant: "Broken",
   },
@@ -63,7 +64,7 @@ export const menuConfig = [
   {
     label: "My Profile",
     path: "/my-profile",
-    icon: FavoriteChart,
+    icon: ProfileCircle,
     iconVariant: "Broken",
   },
   {

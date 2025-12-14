@@ -17,7 +17,10 @@ export default function MediaGallery() {
           Unlock for $102
         </button>
       </DialogTrigger>
-      <DialogContent className="h-[70vh] overflow-y-auto rounded-[20px] border-none p-0 sm:max-w-[1027px]">
+      <DialogContent
+        showCloseButton={false}
+        className="h-[70vh] overflow-y-auto rounded-[20px] border-none p-0 sm:max-w-[1027px]"
+      >
         <DialogHeader hidden>
           <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>

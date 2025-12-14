@@ -26,6 +26,7 @@ import {
   Twitter,
   UndoIcon,
   UserIcon,
+  UserScan,
   VideoIcon,
   VideoMd,
   VideoPlay,
@@ -78,6 +79,7 @@ export const themeIcons: ThemeIcon[] = [
   { name: "GifIcon", Icon: GifIcon },
   { name: "VideoMdIcon", Icon: VideoMd },
   { name: "VideoPlayIcon", Icon: VideoPlay },
+  { name: "UserScanIcon", Icon: UserScan },
 ];
 
 export function ThemeIconsGrid() {

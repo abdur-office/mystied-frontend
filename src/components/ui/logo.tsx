@@ -19,7 +19,7 @@ const Logo = ({ className }: LogoProps) => {
       <Image src="/svgs/logo.svg" alt="Auro" width={30} height={31} priority />
       <span
         className={cn(
-          "text-xl leading-normal font-semibold text-black dark:text-white",
+          "text-xl leading-normal font-medium text-black dark:text-white",
           isCollapsed && !isMobileOpen ? "hidden" : "block",
         )}
       >
