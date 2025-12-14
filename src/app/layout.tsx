@@ -6,29 +6,6 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";
 import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          font.univaNova,
-          font.sfProRounded,
-          "bg-background text-foreground min-h-svh antialiased",
-        )}
-      >
-        <ThemeProvider>
-          <NuqsAdapter>{children}</NuqsAdapter>
-          <Toaster position="top-right" richColors />
-        </ThemeProvider>
-      </body>
-    </html>
-  );
-}
-
 // TODO: replace with actual info
 export const metadata: Metadata = {
   title: {
@@ -75,3 +52,20 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
 };
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(font.univaNova, font.sfProRounded, "antialiased")}>
+        <ThemeProvider>
+          <NuqsAdapter>{children}</NuqsAdapter>
+          <Toaster position="top-right" richColors />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
