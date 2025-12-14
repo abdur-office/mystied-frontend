@@ -1,6 +1,6 @@
 "use client";
 
-import AppSidebar from "@/components/layouts/dashboard/sidebar/AppSidebar";
+import AppSidebarWrap from "@/components/layouts/dashboard/sidebar/AppSidebarWrap";
 import { SidebarProvider } from "@/providers/SidebarContext";
 
 import { ReactNode } from "react";
@@ -12,12 +12,9 @@ type Props = {
 const DashboardLayout = ({ children }: Props) => {
   return (
     <SidebarProvider>
-      <div className="mx-auto max-w-[1440px] overflow-hidden px-6 py-5">
+      <div className="mx-auto max-w-[1440px] overflow-hidden py-5 xl:px-6">
         {/* Sidebar */}
-        <div className="flex xl:gap-[30px]">
-          <AppSidebar />
-          <main className="flex-1">{children}</main>
-        </div>
+        <AppSidebarWrap>{children}</AppSidebarWrap>
       </div>
     </SidebarProvider>
   );

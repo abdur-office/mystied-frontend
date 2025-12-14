@@ -8,6 +8,7 @@
   /* fonts */
   --font-primary: var(--font-univaNova);
   --font-manrope: var(--font-manrope);
+  --font-secondary: var(--font-sfProRounded);
 
   /* colors */
   --color-background: var(--background);
@@ -45,11 +46,15 @@
   /* THEME COLOR  */
   --color-theme-gray: var(--theme-gray);
   --color-theme-gray-2: var(--theme-gray-2);
+  --color-theme-gray-3: var(--theme-gray-3);
   --color-theme-success: var(--theme-success);
+  --color-theme-success-2: var(--theme-success-2);
   --color-theme-warning: var(--theme-warning);
   --color-theme-danger: var(--theme-danger);
+  --color-theme-danger-2: var(--theme-danger-2);
   --color-theme-blue: var(--theme-blue);
   --color-theme-brown: var(--theme-brown);
+  --color-theme-brown-2: var(--theme-brown-2);
   --color-theme-dark-purple: var(--theme-dark-purple);
   --color-theme-dark-purple-2: var(--theme-dark-purple-2);
   --color-theme-dark-purple-3: var(--theme-dark-purple-3);
@@ -62,7 +67,11 @@
   --color-paragraph: var(--paragraph);
   --color-dark-1-card: var(--dark-1-card);
   --color-dark-2-card: var(--dark-2-card);
+  --color-dark-3-card: var(--dark-3-card);
+  --color-dark-4-card: var(--dark-4-card);
   --color-theme-graphite: var(--theme-graphite);
+  --color-theme-graphite-3: var(--theme-graphite-3);
+  --color-common-text: var(--common-text);
 }
 
 :root {
@@ -114,11 +123,15 @@
   --theme-dark-blue-3: #1c1c1e;
   --theme-dark-blue-4: #34313f;
   --theme-dark-blue-5: #25242b;
-  --theme-purple: rgba(130, 83, 242, 1);
+  --theme-purple: #8253f2;
   --paragraph: #7c797e;
-  --dark-1-card: #1a1c1e;
-  --dark-2-card: #282a2f;
-  --theme-graphite: #373a41;
+  --dark-1-card: #f0eeee;
+  --dark-2-card: #e5e5ea;
+  --dark-3-card: #e1e3e9;
+  --dark-4-card: #d1d1d6;
+  --theme-graphite: #d1d1d6;
+  --theme-graphite-3: #c7c7cc;
+  --common-text: #f2f1f1;
 }
 
 .dark {
@@ -153,4 +166,34 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+
+  /* THEME COLOR  */
+  --theme-gray: #9b9a9d;
+  --theme-gray-2: #919193;
+  --theme-gray-3: #9b9a9d;
+  --theme-success: #21c45d;
+  --theme-success-2: #008236;
+  --theme-warning: #f59f0a;
+  --theme-danger: #dc2828;
+  --theme-danger-2: #d9201c;
+  --theme-blue: #61c8ff;
+  --theme-brown: #9d5b00;
+  --theme-brown-2: #a76000;
+  --theme-dark-purple: #131215;
+  --theme-dark-purple-2: #1c1225;
+  --theme-dark-purple-3: #2c2832;
+  --theme-dark-blue: #232428;
+  --theme-dark-blue-2: #35363b;
+  --theme-dark-blue-3: #1c1c1e;
+  --theme-dark-blue-4: #34313f;
+  --theme-dark-blue-5: #25242b;
+  --theme-purple: #8253f2;
+  --paragraph: #7c797e;
+  --dark-1-card: #1a1c1e;
+  --dark-2-card: #282a2f;
+  --dark-3-card: #2c2832;
+  --dark-4-card: #393741;
+  --theme-graphite: #373a41;
+  --theme-graphite-3: #34353d;
+  --common-text: #141414;
 }

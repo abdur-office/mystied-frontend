@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";
 import "./globals.css";
+
 // TODO: replace with actual info
 export const metadata: Metadata = {
   title: {
@@ -59,14 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          font.univaNova,
-          font.inter,
-          font.manrope,
-          "bg-background text-foreground min-h-svh antialiased",
-        )}
-      >
+      <body className={cn(font.univaNova, font.sfProRounded, "antialiased")}>
         <ThemeProvider>
           <NuqsAdapter>{children}</NuqsAdapter>
           <Toaster position="top-right" richColors />

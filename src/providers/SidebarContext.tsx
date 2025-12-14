@@ -54,7 +54,7 @@ export const SidebarProvider = ({ children }: SidebarProviderProps) => {
 
   // FIXME: update it better approch
   useEffect(() => {
-    if (pathname === "/content-moderation") {
+    if (pathname === "/messages") {
       const timer = setTimeout(() => setIsCollapsed(true), 0); // defer update
       return () => clearTimeout(timer);
     } else {
@@ -91,6 +91,18 @@ export const SidebarProvider = ({ children }: SidebarProviderProps) => {
       document.removeEventListener("keydown", handleEscKey);
     };
   }, []);
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    if (isMobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMobileOpen]);
 
   const contextValue = useMemo(
     () => ({
