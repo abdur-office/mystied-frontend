@@ -5,6 +5,7 @@ import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import { ArrowDown2 } from "iconsax-reactjs";
 
 function Select({
   ...props
@@ -67,6 +68,34 @@ function SelectTrigger({
         >
           <path d="M5 5L0 0H10L5 5Z" fill="white" />
         </svg>
+      </SelectPrimitive.Icon>
+    </SelectPrimitive.Trigger>
+  );
+}
+function SelectTrigger2({
+  className,
+  size = "default",
+  children,
+  ...props
+}: React.ComponentProps<typeof SelectPrimitive.Trigger> & {
+  size?: "sm" | "default";
+}) {
+  return (
+    <SelectPrimitive.Trigger
+      data-slot="select-trigger"
+      data-size={size}
+      className={cn(
+        "data-[placeholder]:text-paragraph [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-theme-purple aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 bg-dark-2-card flex w-full items-center justify-between gap-2 rounded-md border border-white/10 px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:ring-white/10 disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        className,
+      )}
+      {...props}
+    >
+      {children}
+      <SelectPrimitive.Icon asChild className="p-1 lg:p-0">
+        <ArrowDown2
+          variant="Broken"
+          className="text-muted-foreground pointer-events-none size-6 shrink-0 translate-y-0.5 transition-transform duration-200 dark:text-white"
+        />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   );
@@ -205,5 +234,6 @@ export {
   SelectScrollUpButton,
   SelectSeparator,
   SelectTrigger,
+  SelectTrigger2,
   SelectValue,
 };

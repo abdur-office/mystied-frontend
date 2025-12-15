@@ -1,7 +1,7 @@
+import StatementsContent from "@/app/(default-layout)/statements/_components/StatementsContent";
 import AppSearch from "@/components/layouts/dashboard/header/AppSearch";
 import { Calendar2 } from "iconsax-reactjs";
 import { Metadata } from "next";
-import TabList from "./_components/TabList";
 
 export const metadata: Metadata = {
   title: "Queue",
@@ -24,9 +24,7 @@ const Page = () => {
         </div>
       </header>
 
-      <div>
-        <TabList />
-      </div>
+      <StatementsContent />
     </div>
   );
 };

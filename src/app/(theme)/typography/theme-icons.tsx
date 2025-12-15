@@ -5,6 +5,7 @@ import {
   CallIcon,
   ChartIcon,
   ChatIcon,
+  CheckIcon,
   ClockIcon,
   ElectricityIcon,
   EyeIcon,
@@ -82,6 +83,7 @@ export const themeIcons: ThemeIcon[] = [
   { name: "VideoPlayIcon", Icon: VideoPlay },
   { name: "UserScanIcon", Icon: UserScan },
   { name: "FilterBigAlt", Icon: FilterBigAltIcon },
+  { name: "CheckIcon", Icon: CheckIcon },
 ];
 
 export function ThemeIconsGrid() {

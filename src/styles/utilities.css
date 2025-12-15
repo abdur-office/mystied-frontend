@@ -350,4 +350,11 @@
       z-index: 2;
     }
   }
+
+  /* svg.recharts-surface */
+  .recharts-surface {
+    &:focus {
+      outline: none !important;
+    }
+  }
 }

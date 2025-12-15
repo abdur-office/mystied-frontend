@@ -7,6 +7,7 @@ export * from "./Bookmark";
 export * from "./Call";
 export * from "./Chart";
 export * from "./Chat";
+export * from "./Check";
 export * from "./CheckBox";
 export * from "./Clock";
 export * from "./Comment1";
