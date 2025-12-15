@@ -16,7 +16,7 @@ export default function MessageHeader() {
         </div>
         <div>
           <div className="mb-1 flex items-center gap-1">
-            <h3 className="text-common-text text-[17px] font-semibold tracking-[0.204px] dark:text-white">
+            <h3 className="text-[17px] font-semibold tracking-[0.204px] text-[#141414] dark:text-white">
               Rizky Pang
             </h3>
             <button>

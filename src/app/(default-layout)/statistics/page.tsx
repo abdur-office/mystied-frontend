@@ -1,10 +1,10 @@
 import AppSearch from "@/components/layouts/dashboard/header/AppSearch";
 import { ChartSquare } from "iconsax-reactjs";
 import { Metadata } from "next";
-import StatementsContent from "./_components/StatementsContent";
+import StatisticsContent from "./_components/StatisticsContent";
 
 export const metadata: Metadata = {
-  title: "Statements",
+  title: "Statistics",
 };
 
 const Page = () => {
@@ -18,7 +18,7 @@ const Page = () => {
             className="text-black dark:text-white"
           />
           <h2 className="text-[23px] font-semibold text-black dark:text-white">
-            Statements
+            Statistics
           </h2>
         </div>
 
@@ -27,7 +27,7 @@ const Page = () => {
         </div>
       </header>
 
-      <StatementsContent />
+      <StatisticsContent />
     </div>
   );
 };

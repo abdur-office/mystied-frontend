@@ -45,7 +45,7 @@ export default function MessageList({
         <div className="flex items-center justify-between">
           <span
             className={cn(
-              `text-common-text inline-flex items-center justify-center rounded-[4px] border border-[#C7C7CC] px-1.5 py-0.5 pt-1 text-[8px] font-normal dark:border-[#4C4B4E] dark:text-white ${badge === "EXPIRED" ? "bg-[#E3030373]" : "bg-transparent"}`,
+              `inline-flex items-center justify-center rounded-[4px] border border-[#C7C7CC] px-1.5 py-0.5 pt-1 text-[8px] font-normal text-[#141414] dark:border-[#4C4B4E] dark:text-white ${badge === "EXPIRED" ? "bg-[#E3030373]" : "bg-transparent"}`,
             )}
           >
             {badge}
@@ -54,7 +54,7 @@ export default function MessageList({
             <XIcon size={12} className="stroke-paragraph text-paragraph" />
           </button>
         </div>
-        <p className="text-common-text text-sm font-medium dark:text-white">
+        <p className="text-sm font-medium text-[#141414] dark:text-white">
           {name}
         </p>
         <div className="flex items-center justify-between">

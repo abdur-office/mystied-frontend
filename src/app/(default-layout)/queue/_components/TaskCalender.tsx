@@ -45,7 +45,7 @@ export default function TaskCalender({
         </button>
       </div>
       <div className="p-[18px]">
-        <button className="flex w-full items-center justify-center rounded-lg bg-black/5 p-2 transition-colors hover:bg-black/10 dark:bg-black/10 dark:hover:bg-white/5">
+        <button className="flex w-full items-center justify-center rounded-lg bg-black/5 p-2 transition-colors hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/5">
           <Plus className="h-4 w-4 text-black dark:text-white/60" />
         </button>
       </div>

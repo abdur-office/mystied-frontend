@@ -57,7 +57,7 @@ export default function TimezoneDialog({
     <Dialog>
       <DialogTrigger asChild>
         {trigger ?? (
-          <button className="text-common-text text-sm dark:text-white/80">
+          <button className="text-sm text-[#141414] dark:text-white/80">
             Select Timezone
           </button>
         )}

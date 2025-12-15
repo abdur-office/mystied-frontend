@@ -50,8 +50,11 @@ function AccordionTrigger({
 function AccordionTrigger2({
   className,
   children,
+  arrowClassName,
   ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
+}: React.ComponentProps<typeof AccordionPrimitive.Trigger> & {
+  arrowClassName?: string;
+}) {
   return (
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
@@ -65,7 +68,10 @@ function AccordionTrigger2({
         {children}
         <ArrowDown2
           variant="Broken"
-          className="text-muted-foreground pointer-events-none -mt-1 size-4 shrink-0 translate-y-0.5 transition-transform duration-200 lg:size-6 dark:text-white"
+          className={cn(
+            "text-muted-foreground pointer-events-none -mt-1 size-4 shrink-0 translate-y-0.5 transition-transform duration-200 lg:size-6 dark:text-white",
+            arrowClassName,
+          )}
         />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>

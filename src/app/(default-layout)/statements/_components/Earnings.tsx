@@ -45,6 +45,15 @@ export default function Earnings() {
             </TableRow>
           </TableHeader>
           <TableBody className="[&_tr:last-child]:border-b">
+            {/* Empty  */}
+            <TableRow className="hidden border-none">
+              <TableCell
+                colSpan={5}
+                className="font-primary pt-4 pb-3 text-center text-sm leading-4 font-normal text-black/80 lowercase dark:text-white/60"
+              >
+                this list is empty
+              </TableCell>
+            </TableRow>
             {Array.from({ length: 15 }).map((_, index) => (
               <TableRow
                 key={index}
