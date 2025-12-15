@@ -4,10 +4,10 @@
   }
 
   body {
-    @apply font-secondary;
+    @apply font-primary;
 
     /* Scale page to 1440px */
-    zoom: 1.333;
+    /* zoom: 1.333; */
 
     /* Background */
     background: linear-gradient(#dcddeb 0%, #9ba2b2 100%);

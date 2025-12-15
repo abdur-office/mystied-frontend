@@ -37,7 +37,7 @@ export default function PageClient() {
               <p className={`font-semibold ${color.text}`}>
                 {color.name}
                 <span className="ml-2 text-xs">
-                  <code className="text-theme-blue">.{color.text}</code>
+                  <code className="text-theme-sky">.{color.text}</code>
                   <CopyButton text={color.text} />
                 </span>
               </p>
@@ -62,7 +62,7 @@ export default function PageClient() {
                 <tr key={item.class}>
                   <td className="py-2">
                     <span className="mr-4 ml-2 text-xs">
-                      <code className="text-theme-blue">.{item.class}</code>
+                      <code className="text-theme-sky">.{item.class}</code>
                     </span>
                     <span className={item.class}>{item.example}</span>
                     <CopyButton text={item.class} />

@@ -121,7 +121,7 @@ export function SignInForm() {
                 <div className="mb-2 flex items-center space-x-3">
                   <FormControl>
                     <span
-                      className={`h-5 w-5 rounded-full border-2 ${field.value ? "bg-theme-blue border-white" : "border-paragraph"}`}
+                      className={`h-5 w-5 rounded-full border-2 ${field.value ? "bg-theme-sky border-white" : "border-paragraph"}`}
                       onClick={() => field.onChange(!field.value)}
                     ></span>
                   </FormControl>
@@ -135,7 +135,7 @@ export function SignInForm() {
                 <div>
                   <Link
                     href="#"
-                    className="text-theme-blue text-sm font-normal hover:underline"
+                    className="text-theme-sky text-sm font-normal hover:underline"
                   >
                     Forgot Password?
                   </Link>
