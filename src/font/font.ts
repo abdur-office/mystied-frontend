@@ -4,85 +4,85 @@ import localFont from "next/font/local";
 const univaNova = localFont({
   src: [
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Hairline.woff",
+      path: "../../public/fonts/univa-nova/UnivaNova-Hairline.ttf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Hairline.woff2",
+      path: "../../public/fonts/univa-nova/UnivaNova-Hairline.otf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Thin.woff",
+      path: "../../public/fonts/univa-nova/UnivaNova-Thin.ttf",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Thin.woff2",
+      path: "../../public/fonts/univa-nova/UnivaNova-Thin.otf",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Light.woff",
+      path: "../../public/fonts/univa-nova/UnivaNova-Light.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Light.woff2",
+      path: "../../public/fonts/univa-nova/UnivaNova-Light.otf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Regular.woff",
+      path: "../../public/fonts/univa-nova/UnivaNova-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Regular.woff2",
+      path: "../../public/fonts/univa-nova/UnivaNova-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Medium.woff",
+      path: "../../public/fonts/univa-nova/UnivaNova-Medium.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Medium.woff2",
+      path: "../../public/fonts/univa-nova/UnivaNova-Medium.otf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-SemiBold.woff",
+      path: "../../public/fonts/univa-nova/UnivaNova-SemiBold.ttf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-SemiBold.woff2",
+      path: "../../public/fonts/univa-nova/UnivaNova-SemiBold.otf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Bold.woff",
+      path: "../../public/fonts/univa-nova/UnivaNova-Bold.ttf",
       weight: "700",
       style: "normal",
     },
+    // {
+    //   path: "../../public/fonts/univa-nova/UnivaNova-Bold.otf",
+    //   weight: "700",
+    //   style: "normal",
+    // },
     {
-      path: "../../public/fonts/univa-nova/UnivaNova-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/univa-nova/UnivaNova-Heavy.woff",
+      path: "../../public/fonts/univa-nova/UnivaNova-Heavy.ttf",
       weight: "800",
       style: "normal",
     },
-    {
-      path: "../../public/fonts/univa-nova/UnivaNova-Heavy.woff",
-      weight: "800",
-      style: "normal",
-    },
+    // {
+    //   path: "../../public/fonts/univa-nova/UnivaNova-Heavy.otf",
+    //   weight: "700",
+    //   style: "normal",
+    // },
   ],
   variable: "--font-univaNova",
 });

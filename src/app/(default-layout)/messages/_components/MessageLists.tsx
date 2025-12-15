@@ -82,10 +82,10 @@ export default function MessageLists() {
                 className={cn(
                   `relative h-[27px] rounded-[6px] px-1.5 py-0.5 text-sm font-normal whitespace-nowrap select-none dark:bg-[#25242B] dark:text-white ${
                     activeTab.id === item.id
-                      ? "bg-common-text dark:text-theme-success text-white"
+                      ? "dark:text-theme-success bg-[#141414] text-white"
                       : item.success
                         ? "text-theme-success bg-[#E5E5EA]"
-                        : "text-common-text bg-[#E5E5EA]"
+                        : "bg-[#E5E5EA] text-[#141414]"
                   }`,
                 )}
               >

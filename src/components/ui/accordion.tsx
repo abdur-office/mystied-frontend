@@ -5,6 +5,7 @@ import { ChevronDownIcon } from "lucide-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import { ArrowDown2 } from "iconsax-reactjs";
 
 function Accordion({
   ...props
@@ -46,6 +47,36 @@ function AccordionTrigger({
     </AccordionPrimitive.Header>
   );
 }
+function AccordionTrigger2({
+  className,
+  children,
+  arrowClassName,
+  ...props
+}: React.ComponentProps<typeof AccordionPrimitive.Trigger> & {
+  arrowClassName?: string;
+}) {
+  return (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        data-slot="accordion-trigger"
+        className={cn(
+          "flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-sm font-medium transition-all outline-none disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180",
+          className,
+        )}
+        {...props}
+      >
+        {children}
+        <ArrowDown2
+          variant="Broken"
+          className={cn(
+            "text-muted-foreground pointer-events-none -mt-1 size-4 shrink-0 translate-y-0.5 transition-transform duration-200 lg:size-6 dark:text-white",
+            arrowClassName,
+          )}
+        />
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  );
+}
 
 function AccordionContent({
   className,
@@ -63,4 +94,10 @@ function AccordionContent({
   );
 }
 
-export { Accordion, AccordionContent, AccordionItem, AccordionTrigger };
+export {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionTrigger2,
+};
