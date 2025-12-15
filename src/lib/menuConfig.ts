@@ -1,5 +1,6 @@
 import {
   Calendar2,
+  CardAdd,
   ChartSquare,
   FavoriteChart,
   Flag,
@@ -59,6 +60,12 @@ export const menuConfig = [
     label: "Statistics",
     path: "/statistics",
     icon: FavoriteChart,
+    iconVariant: "Broken",
+  },
+  {
+    label: "Add Card",
+    path: "/add-card",
+    icon: CardAdd,
     iconVariant: "Broken",
   },
   {
