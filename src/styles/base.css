@@ -4,7 +4,7 @@
   }
 
   body {
-    @apply font-secondary;
+    @apply font-primary;
 
     /* Scale page to 1440px */
     /* zoom: 1.333; */

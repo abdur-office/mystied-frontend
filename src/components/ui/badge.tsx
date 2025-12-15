@@ -16,7 +16,7 @@ const badgeVariants = cva(
           "border-transparent bg-theme-warning text-white hover:opacity-90",
         danger:
           "border-transparent bg-theme-danger text-white hover:opacity-90",
-        blue: "border-transparent bg-theme-blue text-white hover:opacity-90",
+        blue: "border-transparent bg-theme-sky text-white hover:opacity-90",
         brown: "border-transparent bg-theme-brown text-white hover:opacity-90",
         light: "border border-white/20 bg-white/10 text-white hover:opacity-90",
         transparent: "bg-transparent text-white hover:opacity-90",
