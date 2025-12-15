@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import CstCard from "@/components/ui/CstCard";
-import { InfoCircle } from "iconsax-reactjs";
+import { InfoCircle, Warning2 } from "iconsax-reactjs";
 
 const paymentMethods = [
   {
@@ -51,11 +51,7 @@ const PaymentCards = () => {
         <div className="border-theme-danger-3/30 relative mb-5 overflow-hidden rounded-[10px] border px-3 py-3.5">
           <div className="bg-theme-danger-3/20 absolute top-0 left-0 h-full w-7 rounded-tl-[10px] rounded-bl-[10px]" />
           <div className="flex items-center gap-2">
-            <InfoCircle
-              size={18}
-              variant="Broken"
-              className="text-theme-danger-3"
-            />{" "}
+            <Warning2 size={18} className="text-theme-danger-3" />{" "}
             <span>
               Please <span className="text-theme-blue">add a new card</span> to
               subscribe to other user or recharge your wallet.
