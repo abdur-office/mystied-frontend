@@ -46,15 +46,11 @@
   /* THEME COLOR  */
   --color-theme-gray: var(--theme-gray);
   --color-theme-gray-2: var(--theme-gray-2);
-  --color-theme-gray-3: var(--theme-gray-3);
   --color-theme-success: var(--theme-success);
-  --color-theme-success-2: var(--theme-success-2);
   --color-theme-warning: var(--theme-warning);
   --color-theme-danger: var(--theme-danger);
-  --color-theme-danger-2: var(--theme-danger-2);
   --color-theme-blue: var(--theme-blue);
   --color-theme-brown: var(--theme-brown);
-  --color-theme-brown-2: var(--theme-brown-2);
   --color-theme-dark-purple: var(--theme-dark-purple);
   --color-theme-dark-purple-2: var(--theme-dark-purple-2);
   --color-theme-dark-purple-3: var(--theme-dark-purple-3);
@@ -123,7 +119,7 @@
   --theme-dark-blue-3: #1c1c1e;
   --theme-dark-blue-4: #34313f;
   --theme-dark-blue-5: #25242b;
-  --theme-purple: #8253f2;
+  --theme-purple: rgba(130, 83, 242, 1);
   --paragraph: #7c797e;
   --dark-1-card: #f0eeee;
   --dark-2-card: #e5e5ea;
@@ -131,7 +127,7 @@
   --dark-4-card: #d1d1d6;
   --theme-graphite: #d1d1d6;
   --theme-graphite-3: #c7c7cc;
-  --common-text: #f2f1f1;
+  --common-text: #141414;
 }
 
 .dark {
@@ -195,5 +191,4 @@
   --dark-4-card: #393741;
   --theme-graphite: #373a41;
   --theme-graphite-3: #34353d;
-  --common-text: #141414;
 }
