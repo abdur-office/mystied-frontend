@@ -1,5 +1,4 @@
 "use client";
-import Logo from "@/components/ui/logo";
 import Image from "next/image";
 import Link from "next/link";
 import SignUpCarousel from "../sign-up/_components/SignUpCarousel";
@@ -13,9 +12,7 @@ export default function AuroSignUp() {
       <div className="flex w-full items-center justify-center p-8 lg:w-[45%]">
         <div className="w-full max-w-md">
           {/* Logo */}
-          <div className="absolute top-6 left-6">
-            <Logo />
-          </div>
+          <div className="absolute top-6 left-6">{/* <Logo /> */}</div>
 
           {/* Form Header */}
           <div className="mt-10 mb-10 lg:mt-28">

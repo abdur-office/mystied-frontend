@@ -1,6 +1,7 @@
 import AppSearch from "@/components/layouts/dashboard/header/AppSearch";
 import { ChartSquare } from "iconsax-reactjs";
 import { Metadata } from "next";
+import { Suspense } from "react";
 import StatementsContent from "./_components/StatementsContent";
 
 export const metadata: Metadata = {
@@ -27,7 +28,9 @@ const Page = () => {
         </div>
       </header>
 
-      <StatementsContent />
+      <Suspense fallback={<div>Loading...</div>}>
+        <StatementsContent />
+      </Suspense>
     </div>
   );
 };
